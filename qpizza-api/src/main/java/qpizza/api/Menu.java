@@ -1,4 +1,4 @@
-package qpizza;
+package qpizza.api;
 
 public class Menu {
     String title;

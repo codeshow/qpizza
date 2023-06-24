@@ -1,4 +1,4 @@
-package qpizza;
+package qpizza.api;
 
 import java.util.Map;
 

@@ -2,6 +2,9 @@ package qpizza.api;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import io.quarkus.security.Authenticated;
 import io.quarkus.security.identity.SecurityIdentity;
 import jakarta.inject.Inject;
@@ -12,6 +15,8 @@ import jakarta.ws.rs.core.MediaType;
 
 @Path("user")
 public class WhoAmIResource {
+    Logger log = LoggerFactory.getLogger(WhoAmIResource.class);
+
     @Inject
     SecurityIdentity id;
 
@@ -20,7 +25,11 @@ public class WhoAmIResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Authenticated
     public Map<String, String> getWhoAmI() {
-        return getUserInfo();
+        var result = getUserInfo();
+        log.info("Who Am I?");
+        log.info("{}", result);
+        System.out.println();
+        return result;
     }
 
     @Path("whoami_pub")

@@ -1,2 +1,27 @@
 image:
   file: .gitpod.Dockerfile
+
+tasks:
+  - name: welcome to quarkus
+    command: quarkus --help
+
+  - name: api
+    init: mvn -f qpizza-api compile
+    command: mvn -f qpizza-api quarkus:dev
+    
+  - name: app
+    init: mvn -f qpizza-app compile
+    command: mvn -f qpizza-app quarkus:dev       
+
+ports:
+  - port: 3306
+    visibility: public
+    onOpen: ignore
+
+  - port: 8888
+    visibility: public
+    onOpen: ignore
+
+  - port: 8080
+    visibility: public
+    onOpen: ignore

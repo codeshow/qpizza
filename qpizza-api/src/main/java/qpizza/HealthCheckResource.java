@@ -1,4 +1,4 @@
-package qpizza.api;
+package qpizza;
 
 import java.sql.SQLException;
 import java.util.Map;

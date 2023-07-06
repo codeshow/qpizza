@@ -11,11 +11,16 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import qpizza.core.service.PizzaService;
+
 @Path("/health")
 public class HealthCheckResource {
 
     @Inject
     DataSource ds; 
+
+    @Inject
+    PizzaService pizzaSvc;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -28,7 +33,10 @@ public class HealthCheckResource {
                 status = "invalid";
             }
         }
-        var result = Map.of("healthy", status);
+        var result = Map.of(
+            "healthy", status,
+            "pizza", pizzaSvc.getPizza()
+            );
         return result;
     }
     

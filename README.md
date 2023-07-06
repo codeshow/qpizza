@@ -1,6 +1,6 @@
 # Quarkus Pizza
 
-Our sample quarkus app for https://codeshow.com.br
+Our sample quarkus app for the quarkus series at https://quarkus.pizza (portuguese)
 
 # GitPod
 

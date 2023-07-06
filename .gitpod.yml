@@ -21,3 +21,8 @@ ports:
   - port: 8888
     visibility: public
     onOpen: ignore
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - vscjava.vscode-maven

@@ -33,4 +33,5 @@ vscode:
     - redhat.fabric8-analytics
     - ms-azuretools.vscode-docker
     - mathiasfrohlich.kotlin
+    - hashicorp.terraform
 

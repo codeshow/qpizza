@@ -25,6 +25,7 @@ ports:
 vscode:
   extensions:
     - vscjava.vscode-java-pack
+    - vscjava.vscode-maven
     - vscjava.vscode-java-debug
     - vscjava.vscode-java-dependency
     - vscjava.vscode-java-test
@@ -34,4 +35,3 @@ vscode:
     - ms-azuretools.vscode-docker
     - mathiasfrohlich.kotlin
     - hashicorp.terraform
-

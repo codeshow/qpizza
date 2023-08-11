@@ -9,3 +9,7 @@ output "private_subnet_ids" {
 output "public_subnet_ids" {
   value = module.networking.public_subnet_ids
 }
+
+output "aurora_sg_id" {
+  value = module.database.aurora_sg_id
+}
